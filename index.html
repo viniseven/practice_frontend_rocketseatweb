@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+   <html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+         <link href="./fontawesome/css/all.css" rel="stylesheet">
+         <script type="text/javascript" src="scripts.js"></script>
+         <link rel="shortcut icon" type="imagex/jpg" href="./images/rocket_icon.jpg">
+         <link rel="stylesheet" href="styles.css">
+   
+         <title>Rocketseat | A menor distância para seus objetivos</title>
+      </head>
+   
+      <body>
+         <section class="header-content">
+            <div class="header-navbar">
+               <img src="./images/rocketseat_logo.svg" alt="rocketseat-logo">
+
+               <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Planos</a></li>
+                  <li><a href="#">Sobre</a></li>
+                  <li><a href="#">Contato</a></li>
+               </ul>
+
+               <div class="handler-user">
+                  <button class="button-sign"><i class="fa-regular fa-user fa-lg"></i> Entrar</button>
+                  <button class="button-plain">Conhecer nossos planos</button>
+               </div>
+            </div>
+
+            <div class="title">
+               <h1 class="title-home">Acelere cada etapa da sua carreira em programação</h1>
+
+               <p>O mapa completo para você impulsionar sua evolução e acessar as
+                  melhores oportunidades da sua carreira como dev.
+               </p>
+            </div>
+         </section>
+      </body>
+      <script>
+         function typeWriter(elemento){
+            const textArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textArray.forEach((letter, i) =>{
+               setTimeout(() =>{
+                  elemento.innerHTML += letter;
+               }, 75 * i)
+            });
+         }
+
+         const write = document.querySelector('.title-home');
+         typeWriter(write);
+      </script>
+   </html>
