@@ -1,110 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-}
-
-body{
     font-family: 'Roboto', sans-serif;
 }
 
-.header-content{
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #ebebeb;
+    --gray1: #DEE7F0;
+    --purple0: #4A2FFF;
+    --purple1: #3421B5;
+    --purple2: #2E1DA1;
+    --blue0: #06BCC1;
+    --blue1:#12263A;
+}
+
+  
+.container{
     width: 100vw;
     height: 100vh;
-    background: url(./images/background_header.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
-.header-navbar{
-    width: 55%;
-    position: relative;
-    margin: auto;
-    padding: 1.5rem 0rem;
-    display: flex;
-    font-size: 1.1rem;
-}
-
-.header-navbar img{
-    width: 20%;
-}
-
-.header-navbar ul{
-    color: #b1b1b4;
-    display: flex;
-    list-style: none;
-}
-
-.header-navbar li a{
-    margin-left: 3rem;
-    line-height: 3rem;
-    cursor: pointer; 
-    text-decoration: none;
-    color: #b1b1b4;
-}
-
-.header-navbar li a:hover{
-    font-weight: 500;
-    color: #ffffff;
-    border-bottom: 3px solid #04d361;
-    padding-bottom: 2rem;
-}
-
-.handler-user{
+.bar-header{
+    background-color: var(--gray);
     display: flex;
     justify-content: center;
-    width: 40%;
-    margin-left: 3rem;
+    width: 100%;
 }
 
-.handler-user button{
-    margin: 0rem 1rem;
-    width: 70%;
-    font-size: 15px;
+.navigation{
+    position: relative;
+    width: 100%;
+    display: flex;
+    max-width: 1388px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation img{
+    width: 6%;
+    margin: 3px;
+    border-radius: 1.5rem;
+}
+
+.menu ul {
+list-style: none;
+}
+
+.menu li{
+    display: inline;
+    margin: 2rem;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--blue1);
     font-weight: 600;
+}
+
+.menu a:hover{
+    border-bottom: 2px solid var(--purple1);
+}
+
+.buttons-access{
+    width: 20%;
+    height: 60%;
+    display: flex;
+}
+
+button{
+    width: 50%;
+    margin-left: 0.2rem;  
+    border-style: none;
     border-radius: 5px;
+    background-color: var(--purple0);
+    color: var(--white);
+    font-weight: 600;
 }
 
-.button-sign{
-    border: 1px solid #04d361;
-    background-color: black;
-    color: #ffffff;
+button:hover{
     cursor: pointer;
+    background-color: var(--purple1);
+    transition: 1s;
 }
 
-.button-sign:hover{
-    border: 3px solid #04d361;
-    transition: 0.2s;
+.header-content{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
-.button-plain{
-    background-color: #04d361;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
-.button-plain:hover{
-    background-color: #1e9453;
-    transition: 0.2s;
-}
-
-.title{
-    color: #ffffff;
+.title-content{
     width: 30%;
-    margin: 8rem 0rem 0rem 4rem;
+    height: 50%;
+    margin: 5%;
 }
 
-.title h1{
-    font-size: 4rem;
+.title-home{
+    font-size: 3rem;
+    color: var(--blue1);
 }
+
+.header-img{
+    height: 80%;
+}
+
 
 h1::after{
     content: '|';
     margin-left: 5px;
-    font-size: 60px;
+    font-size: 3rem;
     opacity: 1;
     animation: flash .7s infinite;
 }
@@ -118,7 +128,58 @@ h1::after{
     }
 }
 
-.title p{
-    font-size: 1.4rem;
-    margin-top: 3rem;
+#description{
+    font-size: 1.3rem;
+    margin-top: 10%;
+    font-weight: 500;
+    color: var(--blue1);
 }
+
+.img-header{
+    flex-basis: 50%;
+}
+
+.board-rocket{
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.board-rocket button{
+    width: 12%;
+    height: 90%;
+}
+
+.title-plans{
+    width: 40%;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    color: var(--blue1);
+}
+
+.plains{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+}
+
+.plains div{
+    width: 20%;
+    margin: 1rem;
+    text-align: center;
+    background-color: var(--gray1);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.plains h3{
+    font-size: 1.4rem;
+    color: var(--blue1);
+}
+
+.plains p{
+    padding-top: 1rem;
+    color: var(--blue1);
+}
+

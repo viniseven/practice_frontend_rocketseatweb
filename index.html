@@ -1,57 +1,103 @@
 <!DOCTYPE html>
-   <html lang="en">
-      <head>
-         <meta charset="UTF-8">
-         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         
-         <link href="./fontawesome/css/all.css" rel="stylesheet">
-         <script type="text/javascript" src="scripts.js"></script>
-         <link rel="shortcut icon" type="imagex/jpg" href="./images/rocket_icon.jpg">
-         <link rel="stylesheet" href="styles.css">
-   
-         <title>Rocketseat | A menor distância para seus objetivos</title>
-      </head>
-   
-      <body>
-         <section class="header-content">
-            <div class="header-navbar">
-               <img src="./images/rocketseat_logo.svg" alt="rocketseat-logo">
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./styles.css">
+      <title>Rocketseat | Evolua Rápido com a Tecnologia</title>
+   </head>
 
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Planos</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Contato</a></li>
-               </ul>
+   <body>
+      <div class="container">
+         <section id="header">
+               <div class="bar-header">
+                  <div class="navigation">
+                     <img src="./images/logo_rocketseat.jpeg" alt="">
+                        
+                        <div class="menu">
+                           <ul>
+                              <li><a href="">Home</a></li>
+                              <li><a href="">Planos</a></li>
+                              <li><a href="">Sobre</a></li>
+                              <li><a href="">Contato</a></li>
+                           </ul>
+                        </div>
+               
+                        <div class="buttons-access">
+                           <button>ENTRAR</button>
+                           <button>CADASTRAR</button>
+                        </div>
+                  </div>
+               </div>
 
-               <div class="handler-user">
-                  <button class="button-sign"><i class="fa-regular fa-user fa-lg"></i> Entrar</button>
-                  <button class="button-plain">Conhecer nossos planos</button>
+
+               <div class="header-content">
+                  <div class="title-content">
+                     <h1 class="title-home">Acelere cada etapa da sua carreira em programação.</h1>
+                     <p id="description"></p>
+                  </div>   
+                  
+                  <div class="header-img">
+                     <img src="./images/rocket1.png" alt="">
+                  </div>
+                  
+                  <div class="board-rocket">
+                     <button>EMBARCAR NO FOGUETE</button>
+                  </div>
+               </div>
+         </section>
+
+
+         <section id="plans-signature">
+            <div class="title-plans">
+               <h2>Somos uma plataforma completa de aprendizado contínuo em programação</h2>
+            </div>
+
+            <div class="plains">
+               <div>
+                  <h3>Para você começar</h3>
+                  <p>Crie uma base sólida na programação para decolar rumo a desafios maiores</p>
+               </div>
+                  
+               <div>
+                  <h3>Para você se aperfeiçoar e acelerar</h3>
+                  <p>Acelere na carreira através de uma tecnologia específica</p>
+               </div>
+
+               <div>
+                  <h3>Para continuar avançando</h3>
+                  <p>A única forma de acompanhar a tecnologia é evoluindo com ela</p>
                </div>
             </div>
-
-            <div class="title">
-               <h1 class="title-home">Acelere cada etapa da sua carreira em programação</h1>
-
-               <p>O mapa completo para você impulsionar sua evolução e acessar as
-                  melhores oportunidades da sua carreira como dev.
-               </p>
-            </div>
          </section>
-      </body>
-      <script>
-         function typeWriter(elemento){
-            const textArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-            textArray.forEach((letter, i) =>{
-               setTimeout(() =>{
-                  elemento.innerHTML += letter;
-               }, 75 * i)
-            });
-         }
 
-         const write = document.querySelector('.title-home');
-         typeWriter(write);
-      </script>
-   </html>
+
+      </div>  
+   </body>
+
+   <script>
+      function typeWriter(element){
+         const textArray = element.innerHTML.split('');
+         element.innerHTML = '';
+         textArray.forEach((letter, i) => {
+            setTimeout(() => {
+               element.innerHTML += letter;
+            }, 75 * i)
+         });
+      }
+
+      const write =document.querySelector('.title-home');
+      typeWriter(write);
+
+
+
+
+      const myTimeout = setTimeout(description, 4000);
+
+      function description(){
+         document.getElementById("description").innerHTML = 'O mapa completo para você impulsionar sua evolução e acessar as melhores oportunidades da sua carreira como dev.'
+      }
+   </script>
+   
+</html>
